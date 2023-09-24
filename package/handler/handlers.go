@@ -20,9 +20,9 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	{
 		rooms := apiV2.Group("room")
 		{
-			rooms.POST("", h.)           // return room - wallet, telegram
-			rooms.POST("/join", h.)      // join to the room - room_id, wallet, telegram
-			rooms.POST("/increment", h.) // getting increment - room_id, wallet, telegram
+			rooms.POST("", h.RoomCreate)              // return room - wallet, telegram
+			rooms.POST("/join", h.RoomJoin)           // join to the room - room_id, wallet, telegram
+			rooms.POST("/increment", h.RoomIncrement) // getting increment - room_id, wallet, telegram
 
 		}
 	}

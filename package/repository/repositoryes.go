@@ -1,13 +1,14 @@
 package repositoryes
 
-import sqlx "github.com/jmoiron/sqlx"
+import (
+	shotball "hackthon_back"
+
+	sqlx "github.com/jmoiron/sqlx"
+)
 
 type Rooms interface {
-	// GetAll()
-	// GetById()
-	// Post()
-	// Update()
-	// Delete()
+	CreateRoom(input shotball.CreateData) (shotball.CreatedRoom, error)
+	DeleteRoom(wallet_id string) error
 }
 type Repository struct {
 	Rooms
