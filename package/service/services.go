@@ -7,7 +7,7 @@ import (
 
 type Rooms interface {
 	CreateRoom(input shotball.CreateData) (shotball.CreatedRoom, error) // id string, roundDuration 5min, roomDuration 15min, roomStartDate ms, roundStartDate ms
-	JoinRoom(input shotball.JoinData) (shotball.AllId, error)           // id_room
+	JoinRoom(input shotball.JoinData) (shotball.CreatedRoom, error)     // id_room
 	IncrementingRoom(input shotball.IncrementData) error
 }
 type Service struct {

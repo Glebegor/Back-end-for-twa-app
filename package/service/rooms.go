@@ -21,7 +21,7 @@ func (s *RoomsService) CreateRoom(input shotball.CreateData) (shotball.CreatedRo
 	}()
 	return data, err
 }
-func (s *RoomsService) JoinRoom(input shotball.JoinData) (shotball.AllId, error) { // id_room
+func (s *RoomsService) JoinRoom(input shotball.JoinData) (shotball.CreatedRoom, error) { // id_room
 	data, err := s.repo.AddUserToRoom(input)
 	return data, err
 }

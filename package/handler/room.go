@@ -20,10 +20,9 @@ func (h *Handler) RoomCreate(c *gin.Context) {
 		newResponse(c, http.StatusBadGateway, err.Error())
 		return
 	}
-
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"id":             data.Id,
-		"ShorId":         data.ShortId,
+		"shortId":        data.ShortId,
 		"roundDuration":  data.RoundDuration,
 		"roomDuration":   data.RoomDuration,
 		"roomStartDate":  data.RoomStartDate,
@@ -46,7 +45,12 @@ func (h *Handler) RoomJoin(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, map[string]interface{}{
-		"id": data,
+		"id":             data.Id,
+		"shortId":        data.ShortId,
+		"roundDuration":  data.RoundDuration,
+		"roomDuration":   data.RoomDuration,
+		"roomStartDate":  data.RoomStartDate,
+		"roundStartDate": data.RoundStartDate,
 	})
 }
 
@@ -63,5 +67,7 @@ func (h *Handler) RoomIncrement(c *gin.Context) {
 		newResponse(c, http.StatusBadGateway, err.Error())
 		return
 	}
-	c.JSON(http.StatusOK, map[string]interface{}{})
+	c.JSON(http.StatusOK, map[string]interface{}{
+		"status": "ok",
+	})
 }

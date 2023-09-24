@@ -1,14 +1,14 @@
 CREATE TABLE rooms(
-    id VARCHAR(255) PRIMARY KEY,
-    shorId VARCHAR(255),
+    id VARCHAR(1000) PRIMARY KEY,
+    shortId VARCHAR(255),
 	roundDuration INT,
 	roomDuration INT,
 	roomStartDate INT,
 	roundStartDate INT
 );
 CREATE TABLE users_rooms(
-    id_room VARCHAR(255) REFERENCES rooms(id) ON DELETE CASCADE NOT NULL,
+    id_room VARCHAR(1000) REFERENCES rooms(id) ON DELETE CASCADE NOT NULL,
     id_user INT,
-    id_wallet VARCHAR(255), 
+    id_wallet VARCHAR(1000), 
     score INT
 );
