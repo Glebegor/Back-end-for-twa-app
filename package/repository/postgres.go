@@ -8,6 +8,7 @@ import (
 
 const (
 	Table_Rooms = "rooms"
+	Table_users = "users_rooms"
 )
 
 type ConfigDB struct {

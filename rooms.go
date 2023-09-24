@@ -6,12 +6,16 @@ type CreateData struct {
 }
 type CreatedRoom struct {
 	Id             string `json:"id"`
+	ShorId         string `json:"shortId"`
 	RoundDuration  int32  `json:"roundDuration"`  // ms
 	RoomDuration   int32  `json:"roomDuration"`   // ms
 	RoomStartDate  int64  `json:"roomStartDate"`  // ms
 	RoundStartDate int64  `json:"roundStartDate"` // ms
 }
-
+type AllId struct {
+	Id     string `json:"id"`
+	ShorId string `json:"shortId"`
+}
 type JoinData struct {
 	Wallet   string `json:"wallet"`
 	Telegram string `json:"telegram"`

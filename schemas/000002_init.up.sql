@@ -1,5 +1,6 @@
 CREATE TABLE rooms(
     id VARCHAR(255) PRIMARY KEY,
+    shorId VARCHAR(255),
 	roundDuration INT,
 	roomDuration INT,
 	roomStartDate INT,

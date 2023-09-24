@@ -23,6 +23,7 @@ func (h *Handler) RoomCreate(c *gin.Context) {
 
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"id":             data.Id,
+		"ShorId":         data.ShortId,
 		"roundDuration":  data.RoundDuration,
 		"roomDuration":   data.RoomDuration,
 		"roomStartDate":  data.RoomStartDate,
